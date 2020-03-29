@@ -1,0 +1,18 @@
+1) Parent: Spell
+   Child: Accio, Confundo
+
+2) Base: Spell
+   SubClass: Accio, Confundo
+
+3) spell.execute will make 'Accio' print
+   study_spell(spell) will print the __str__ from the spell object which would be "Summoning Charm Accio"
+   study_spell(Confundo()) will create a Confundo object which will print the __str__ from the spell object with the objects description:(answer on next 2 lines)
+	"Confundus Charm Confundo
+	Causes the victim to become confused and befuddled."
+  
+4) The get_description method that is called and run here is the Confundo classes get_description method because the get_description from the spell class is overridden in the Confundo class.
+
+5) The following method needs to be added to the Accio class:
+
+def get_description(self):
+     return 'This charm summons an object to the caster, potentially over a significant distance'
